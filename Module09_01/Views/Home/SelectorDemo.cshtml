@@ -9,6 +9,13 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>SelectorDemo</title>
+    <style>
+        .xx{
+            color:green;
+            background-color:pink;
+            font-size:48px;
+        }
+    </style>
     <script src="~/Scripts/jquery-2.1.4.js"></script>
     <script>
         $(function () {
@@ -16,16 +23,27 @@
             //$("h1").css("color", "red");
             //$("#div1").css("border", "1px solid blue");
             //$(".myclass").css("color", "green");
-            $("h1").css({
-                color: "red",
-                //屬性出現特殊符號(例如-)一定要加雙引號
-                "background-color": "yellow",
-                "font-size": "36px"
+            //$("h1").css({
+            //    color: "red",
+            //    //屬性出現特殊符號(例如-)一定要加雙引號
+            //    "background-color": "yellow",
+            //    "font-size": "36px"
+            //});
+
+            //先在前面設定樣式再用jquery取用
+            $("#Button1").click(function () {
+                $("h1").addClass("xx");
+            });
+            $("#Button2").click(function () {
+                $("h1").removeClass("xx");
             });
         });
     </script>
 </head>
 <body>
+    <input id="Button1" type="button" value="change style" />
+    <input id="Button2" type="button" value="reset style" />
+
     <div>
         <div id="div1">
             <h1>Database</h1>

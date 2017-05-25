@@ -24,9 +24,9 @@
             $("#Button3").bind("click", function () {
                 clickme();
             });
-            $("#Button4").click(function () {
-                //val中有加參數就是set，val函數式兩用型的可以get也可以set
-                $("#Text1").val("Mary")
+            //val中有加參數就是set，val函數式兩用型的可以get也可以set
+            $("#Text1").val("Mary")
+            $("#Button4").click(function () {         
                 //利用jquery取得#Text1的值，val中沒有加參數就是get
                 alert("Hello" + $("#Text1").val());
             });
