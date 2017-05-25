@@ -19,6 +19,10 @@
             document.getElementById("Button3").addEventListener("click", function () {
                 clickme();
             });
+            //利用id取得value
+            document.getElementById("Button4").onclick = function () {
+                alert("Hello, " + document.getElementById("Text1").value)
+            };
         };
         //2.程式開始時先註冊
         //window.onload = ready;
@@ -29,6 +33,9 @@
         <input id="Button1" type="button" value="Click me!" onclick="clickme();" />
         <input id="Button2" type="button" value="DOM Level0 Test" />
         <input id="Button3" type="button" value="DOM Level2 Test" />
+        <hr />
+        name: <input id="Text1" type="text" />
+        <input id="Button4" type="button" value="Hello~" />
     </div>
 
     @*1.要注意JS的解譯方式是從上到下
