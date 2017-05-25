@@ -18,5 +18,10 @@ namespace Module09_01.Controllers
         {
             return View();
         }
+
+        public ActionResult SelectorDemo()
+        {
+            return View();
+        }
     }
 }
