@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/JavaScript1.js"></script>
+    <script>
+        //3.改成匿名函式
+        window.onload = function () {
+            document.getElementById("Button2").onclick = function () {
+                clickme();
+            };
+            document.getElementById("Button3").addEventListener("click", function () {
+                clickme();
+            });
+        };
+        //2.程式開始時先註冊
+        //window.onload = ready;
+    </script>
+</head>
+<body>
+    <div>
+        <input id="Button1" type="button" value="Click me!" onclick="clickme();" />
+        <input id="Button2" type="button" value="DOM Level0 Test" />
+        <input id="Button3" type="button" value="DOM Level2 Test" />
+    </div>
+
+    @*1.要注意JS的解譯方式是從上到下
+    所以要先有id="Button2"，才能去註冊JS的function
+    <script>
+        document.getElementById("Button2").onclick = function () {
+            clickme();
+        }
+    </script>*@
+</body>
+</html>

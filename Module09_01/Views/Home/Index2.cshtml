@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/JavaScript1.js"></script>
+    <script>
+        //原來的onload
+        $(function () {
+            //jQuery
+            //注意ID字串有分大小寫
+            //寫法是$();先寫，然後在小括號中放入 CSS select ID，用"."可以代出方法，方法裡面塞匿名函式
+            //打function然後兩個tab鍵，在去掉函式名稱就變成匿名函式了。
+            $("#Button2").click(function () {
+                clickme();
+            });
+            $("#Button3").bind("click", function () {
+                clickme();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input id="Button2" type="button" value="DOM Level0 Test" />
+        <input id="Button3" type="button" value="DOM Level2 Test" />
+    </div>
+</body>
+</html>
