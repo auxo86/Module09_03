@@ -13,9 +13,15 @@
     <script>
         $(function () {
             //利用jquery來使用CSS的方法
-            $("h1").css("color", "red");
-            $("#div1").css("border", "1px solid blue");
-            $(".myclass").css("color", "green");
+            //$("h1").css("color", "red");
+            //$("#div1").css("border", "1px solid blue");
+            //$(".myclass").css("color", "green");
+            $("h1").css({
+                color: "red",
+                //屬性出現特殊符號(例如-)一定要加雙引號
+                "background-color": "yellow",
+                "font-size": "36px"
+            });
         });
     </script>
 </head>
